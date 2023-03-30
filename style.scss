@@ -1,61 +1,80 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     font-family: 'Poppins', sans-serif;
 }
-button{
+
+button {
     background-color: transparent;
     border: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
-main{
+
+main {
     padding: 0% 5% 5%;
-    section{
+
+    section {
         padding: 3% 0%;
-        .title{
+
+        .title {
             display: flex;
             justify-content: space-between;
-            h2{
+
+            h2 {
                 font-weight: 600;
                 font-size: 2rem;
                 line-height: 27px;
                 color: #323643;
             }
-            button{
-                min-width: 65px;
+
+            .viewAll {
+                color: #FE724C;
+
+                button {
+                    min-width: 65px;
+                }
             }
-            margin-bottom: 10px;
+
+            margin-bottom: 30px;
         }
     }
-    header{
+
+    header {
         display: flex;
         flex-direction: column;
         padding-top: 5%;
         padding-bottom: 1%;
-        .userOptions{
+
+        .userOptions {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            img{
+
+            img {
                 border-radius: 12px;
                 filter: drop-shadow(0px 5px 16px rgba(255, 197, 41, 0.3));
                 min-width: 39px;
             }
         }
-        .userFilter{
+
+        .userFilter {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            .inputSearch{
+
+            .inputSearch {
                 position: relative;
-                i{
+
+                i {
                     top: 17px;
                     left: 16px;
                     position: absolute;
                 }
-                input{
+
+                input {
                     padding-left: 42px;
                     min-height: 50px;
                     min-width: 190px;
@@ -66,26 +85,30 @@ main{
             }
         }
     }
-    .banner{
+
+    .banner {
         border-radius: 10px;
         background-image: linear-gradient(96.5deg, #D6C000 -4.21%, #70FF00 106.34%);
         color: white;
         padding: 1% 3%;
     }
-    .foodOptions{
+
+    .foodOptions {
         display: flex;
         justify-content: space-between;
-        padding-top: 30px;
-        div{
+        padding-top: 40px;
+
+        div {
             display: flex;
             flex-direction: column;
             align-items: center;
             min-width: 50px;
-            
-            i{
+
+            i {
                 height: 40px;
-            }        
-            p{
+            }
+
+            p {
                 font-size: 1.2rem;
                 line-height: 15px;
                 text-align: center;
@@ -95,23 +118,98 @@ main{
             }
         }
     }
-    .foodCard{
-        .placeDelivery{
-            display: flex;
-            gap: 5px;
+
+    .foodCard {
+        transition: 0.3s;
+        min-width: 266px;
+        max-width: 266px;
+        padding-bottom: 4%;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
         }
-        .category{
-            p{
-                max-width: min-content;
-                padding: 4px 8px;
-                background-color: lightgrey;
-                border-radius: 10px;
+
+        a {
+            color: black;
+            text-decoration: none !important;
+
+            .placeDelivery {
+                font-size: 0.8rem;
+                display: flex;
+                gap: 5px;
+            }
+
+            .category {
+                p {
+                    max-width: min-content;
+                    padding: 4px 8px;
+                    background-color: lightgrey;
+                    border-radius: 10px;
+                }
             }
         }
     }
 }
 
-nav{
+.foodInfo {
+    margin: auto;
+    max-width: 266px;
+
+    .foodAvaliation {
+        display: flex !important;
+        align-items: center;
+        gap: 5px;
+
+        a {
+            color: #FE724C;
+        }
+    }
+
+    .qtdFood {
+        display: flex !important;
+        gap: 10px;
+
+        button {
+            cursor: pointer;
+        }
+    }
+}
+
+.optionalComplements {
+    .complement {
+        display: flex !important;
+        justify-content: space-between;
+        margin-bottom: 6px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+button.cart{
+    background-color: #FE724C;
+    color: white;
+    border-radius: 20px;
+    padding: 15px !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    i{
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 10px;
+        color: #FE724C;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+nav {
     top: 90%;
     width: 100%;
     position: fixed;
@@ -119,25 +217,68 @@ nav{
     background-color: white;
     border-top: 5px solid rgba(1, 1, 1, 0.301);
     display: flex;
-        align-items: center;
-        justify-content: center;
-    ul{
+    align-items: center;
+    justify-content: center;
+
+    ul {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20%;
-        li{
+
+        li {
             display: flex;
             align-items: center;
             gap: 10px;
             cursor: pointer;
             transition: 0.3s;
-            &:hover{
-                i, p{
+
+            &:hover {
+
+                i,
+                p {
                     color: #FE724C;
                 }
+
                 transform: translateY(-20%);
             }
         }
+    }
+}
+
+@media (min-width: 450px) {
+    html {
+        font-size: 120%;
+    }
+
+    header {
+        width: 90%;
+        margin: auto;
+        flex-direction: row !important;
+        justify-content: space-between;
+
+        div {
+            .userOptions {
+                gap: 15%;
+
+                img {
+                    width: 130%;
+                }
+            }
+
+            .userFilter {
+                gap: 10%;
+
+                input {
+                    width: 40vw;
+                }
+            }
+        }
+    }
+
+    .foodCards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }

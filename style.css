@@ -22,7 +22,7 @@ main section {
 main section .title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 main section .title h2 {
   font-weight: 600;
@@ -30,7 +30,10 @@ main section .title h2 {
   line-height: 27px;
   color: #323643;
 }
-main section .title button {
+main section .title .viewAll {
+  color: #FE724C;
+}
+main section .title .viewAll button {
   min-width: 65px;
 }
 main header {
@@ -79,7 +82,7 @@ main .banner {
 main .foodOptions {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 main .foodOptions div {
   display: flex;
@@ -96,16 +99,83 @@ main .foodOptions div p {
   text-align: center;
   color: #67666D;
 }
-main .foodCard .placeDelivery {
+main .foodCard {
+  transition: 0.3s;
+  min-width: 266px;
+  max-width: 266px;
+  padding-bottom: 4%;
+  cursor: pointer;
+}
+main .foodCard:hover {
+  transform: scale(1.1);
+}
+main .foodCard a {
+  color: black;
+  text-decoration: none !important;
+}
+main .foodCard a .placeDelivery {
+  font-size: 0.8rem;
   display: flex;
   gap: 5px;
 }
-main .foodCard .category p {
+main .foodCard a .category p {
   max-width: -moz-min-content;
   max-width: min-content;
   padding: 4px 8px;
   background-color: lightgrey;
   border-radius: 10px;
+}
+
+.foodInfo {
+  margin: auto;
+  max-width: 266px;
+}
+.foodInfo .foodAvaliation {
+  display: flex !important;
+  align-items: center;
+  gap: 5px;
+}
+.foodInfo .foodAvaliation a {
+  color: #FE724C;
+}
+.foodInfo .qtdFood {
+  display: flex !important;
+  gap: 10px;
+}
+.foodInfo .qtdFood button {
+  cursor: pointer;
+}
+
+.optionalComplements .complement {
+  display: flex !important;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.optionalComplements .complement div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+button.cart {
+  background-color: #FE724C;
+  color: white;
+  border-radius: 20px;
+  padding: 15px !important;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+button.cart i {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #FE724C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav {
@@ -135,6 +205,36 @@ nav ul li {
 nav ul li:hover {
   transform: translateY(-20%);
 }
-nav ul li:hover i, nav ul li:hover p {
+nav ul li:hover i,
+nav ul li:hover p {
   color: #FE724C;
+}
+
+@media (min-width: 450px) {
+  html {
+    font-size: 120%;
+  }
+  header {
+    width: 90%;
+    margin: auto;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+  header div .userOptions {
+    gap: 15%;
+  }
+  header div .userOptions img {
+    width: 130%;
+  }
+  header div .userFilter {
+    gap: 10%;
+  }
+  header div .userFilter input {
+    width: 40vw;
+  }
+  .foodCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
