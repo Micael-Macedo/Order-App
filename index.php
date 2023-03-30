@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Order APP</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
             </div>
             <div class="foodOptions">
                 <div>
-                <i class="fa-solid fa-drumstick-bite fa-2xl"></i>
+                    <i class="fa-solid fa-drumstick-bite fa-2xl"></i>
                     <p>Meat</p>
                 </div>
                 <div>
@@ -56,7 +56,7 @@
                     <p>Drink</p>
                 </div>
                 <div>
-                <i class="fa-sharp fa-solid fa-comment-dots fa-2xl"></i>
+                    <i class="fa-sharp fa-solid fa-comment-dots fa-2xl"></i>
                     <p>Salad</p>
                 </div>
                 <div>
@@ -68,20 +68,40 @@
         <section>
             <div class="title">
                 <h2>Featured Foods</h2>
-                <button>View All <i class="fa-solid fa-chevron-right"></i></button>
+                <button class="viewAll">View All <i class="fa-solid fa-chevron-right"></i></button>
             </div>
-            <div class="foodCard">
-                <img src="images/Mask Group.png" alt="">
-                <h3>Product name</h3>
-                <div class="placeDelivery">
-                    <i class="fa-solid fa-moped"></i>
-                    <p>Free delivery</p>
-                    <i class="fa-solid fa-timer"></i>
-                    <p>10-15 mins</p>
-                    <b>$9.5</b>
+            <div class="foodCards">
+                <div class="foodCard">
+                    <a href="product.php">
+                        <img src="images/Mask Group.png" alt="">
+                        <h3>Product name</h3>
+                        <div class="placeDelivery">
+                            <i class="fa-solid fa-moped"></i>
+                            <p>Free delivery</p>
+                            <i class="fa-sharp fa-solid fa-timer"></i>
+                            <p>10-15 mins</p>
+                            <b>$9.5</b>
+                        </div>
+                        <div class="category">
+                            <p>Salad</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="category">
-                    <p>Salad</p>
+                <div class="foodCard">
+                    <a href="product.php">
+                        <img src="images/Mask Group.png" alt="">
+                        <h3>Product name</h3>
+                        <div class="placeDelivery">
+                            <i class="fa-solid fa-moped"></i>
+                            <p>Free delivery</p>
+                            <i class="fa-sharp fa-solid fa-timer"></i>
+                            <p>10-15 mins</p>
+                            <b>$9.5</b>
+                        </div>
+                        <div class="category">
+                            <p>Salad</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
