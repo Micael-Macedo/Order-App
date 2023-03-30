@@ -13,36 +13,39 @@ ul {
     list-style: none;
 }
 
+.title {
+    display: flex !important;
+    justify-content: space-between;
+    i{
+        margin-right: 30px;
+        color: #FE724C;
+    }
+    h2 {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 27px;
+        color: #323643;
+    }
+
+    .viewAll {
+        color: #FE724C;
+
+        button {
+            min-width: 65px;
+        }
+    }
+
+    margin-bottom: 30px;
+}
 main {
     padding: 0% 5% 5%;
 
     section {
-        padding: 3% 0%;
-
-        .title {
-            display: flex;
-            justify-content: space-between;
-
-            h2 {
-                font-weight: 600;
-                font-size: 2rem;
-                line-height: 27px;
-                color: #323643;
-            }
-
-            .viewAll {
-                color: #FE724C;
-
-                button {
-                    min-width: 65px;
-                }
-            }
-
-            margin-bottom: 30px;
-        }
+        padding: 2% 0%;
+        
     }
 
-    header {
+    header.userNav {
         display: flex;
         flex-direction: column;
         padding-top: 5%;
@@ -121,10 +124,14 @@ main {
 
     .foodCard {
         transition: 0.3s;
-        min-width: 266px;
-        max-width: 266px;
+        min-width: 260px;
+        max-width: 260px;
         padding-bottom: 4%;
         cursor: pointer;
+        position: relative;
+        img{
+            width: 100%;
+        }
 
         &:hover {
             transform: scale(1.1);
@@ -189,24 +196,30 @@ main {
         }
     }
 }
-button.cart{
-    background-color: #FE724C;
-    color: white;
-    border-radius: 20px;
-    padding: 15px !important;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    i{
-        width: 25px;
-        height: 25px;
-        background-color: white;
-        border-radius: 50%;
-        margin-right: 10px;
-        color: #FE724C;
+div.cartButton{
+    display: flex !important;
+    justify-content: center;
+    button.cart{
+        width: 25% ;
+        min-width: 180px;
+        background-color: #FE724C;
+        color: white;
+        border-radius: 20px;
+        padding: 15px !important;
         display: flex;
         align-items: center;
-        justify-content: center;
+        flex-direction: row;
+        i{
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            color: #FE724C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 nav {
@@ -275,10 +288,26 @@ nav {
             }
         }
     }
-
+    .title{
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
     .foodCards {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        margin-top: 20px;
+    }
+    .foodContent{
+        display: flex;
+        gap: 5%;
+        .foodInfo{
+            width: 90%;
+            min-width: 260px;
+            max-width: 400px;
+            img{
+                width: 100%;
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@
 
 <body>
     <main>
-        <header>
+        <header class="userNav">
             <div>
                 <ul class="userOptions">
                     <li><i class="fa-solid fa-list"></i></li>
